@@ -1,0 +1,46 @@
+#include<stdio.h>
+main()
+{
+int i,j,k,l=0,m=1,n,o=0,p=0,q=0;
+scanf("%d",&n);
+k=(n*4)-1; 
+p=(n*(n+1)); 
+for(i=0;i<n;i++)
+{
+    q=0;
+for(j=0;j<k;j++)
+{
+   if(j>=l)
+   {
+      if(j%2==0)
+      {
+        if(j<(n*2)-1)
+        {
+        printf("%d",m);
+        m++;
+        }
+        else if(j>(n*2)-1)
+        {
+        if(q==0)
+        {
+        o=p-(m-2);
+        q=1;
+        }
+        printf("%d",o);
+        o++;
+        }
+       }
+        else
+        {
+        printf("*");
+        }
+      }
+   else
+   printf("-");
+
+}
+l=l+2;
+k=k-2; 
+printf("\n");
+}
+}
